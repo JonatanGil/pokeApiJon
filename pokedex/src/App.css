@@ -154,10 +154,12 @@ img[id]:hover{
 
   .App-buscador input{
     width: calc(70vw);
+    cursor:'pointer';
   }
   .App-buscador input[value="Buscar"]{
     width: calc(25vw);
     margin-top: 4px;
+    cursor:'pointer';
   }
 
 .tarjeta{
@@ -178,10 +180,12 @@ img[id]:hover{
 
 .App-buscador input{
   width: calc(70vw);
+  cursor:'pointer';
 }
 .App-buscador input[value="Buscar"]{
   width: calc(30vw);
   margin-top: 4px;
+  cursor:'pointer';
 }
 .tarjeta{
 
