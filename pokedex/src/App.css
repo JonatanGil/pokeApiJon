@@ -1,0 +1,249 @@
+
+
+.App-body {
+  text-align: center;
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(217,8,8,1) 100%);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+/*no hace falta el header**/
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+form{
+  margin-bottom: 18px;
+  width: calc(80vw);
+  
+}
+.App-logo-pokemon {
+  height: 40vmin;
+  height: 18vw;
+  /*quitar todo los eventos
+  pointer-events: none;*/
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin:15px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+
+}
+
+.App-buscador{
+  margin:50px;
+  margin-top: 10px;
+
+}
+
+.App-buscador input{
+  background-color: red;
+  color:white;
+  border-radius:8px;
+  border:solid 5px black;
+  margin-left:10px;
+  font-size: 25px;
+  width: calc(80vw);
+}
+
+.App-buscador input[value="Buscar"]{
+  width: calc(25vw);
+  margin-top: 4px;
+}
+
+.tarjeta{
+  border:1px solid rgb(238, 54, 54);
+  background-color: rgba(238, 54, 54,0.05);
+  border-radius:30%;
+  margin:15px;
+  width: 22vw;
+  padding: 3px;
+}
+
+.App-center{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* //100vw pantalla */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius:100px;
+  border:solid 15px black;
+  width: calc(80vw);
+}
+
+
+.App-center h3{
+  border-radius:15%;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  margin-top: 0px;
+
+}
+/*App-center-unPokemon*/
+.App-center-unPokemon{
+  padding: 15px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-template-rows: auto auto auto 100px;
+  
+  
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius:100px;
+  border:solid 15px black;
+}
+.App-logo-type{
+  height: 20vmax;
+  height: 4vh;
+}
+
+.App-center-unPokemon .App-logo-pokemon{
+  grid-column: span 2;
+  grid-row: span 3;
+  height: 40vmin;
+  height: 40vw;  
+  justify-self: start;
+}
+
+.App-center-unPokemon h3{
+  justify-self: center;
+  margin:0px;
+}
+
+.App-center-unPokemon h3[id="moves"]{
+  grid-column: span 1;
+  align-self: center;
+}
+
+img[id]:hover{
+  width:86%;
+  border:0.5px solid red;
+  
+}
+
+.App-center-unPokemon h3[id="descripcion"]{
+  grid-column: span 2;
+  align-self: start;
+}
+.App-center-unPokemon p{
+  font-size: 2vw;
+}
+
+.App-center-unPokemon select{
+  width: 15vh;  
+  justify-self: center;
+}
+
+@media (max-width: 780px) {
+  .App-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .App-buscador input{
+    width: calc(70vw);
+  }
+  .App-buscador input[value="Buscar"]{
+    width: calc(25vw);
+    margin-top: 4px;
+  }
+
+.tarjeta{
+
+  width: 32vw;
+
+
+}
+
+}
+
+
+@media (max-width: 430px) {
+  .App-center{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+.App-buscador input{
+  width: calc(70vw);
+}
+.App-buscador input[value="Buscar"]{
+  width: calc(30vw);
+  margin-top: 4px;
+}
+.tarjeta{
+
+  width: 70vw;
+  font-size: calc(8px + 2vmin);
+
+
+}
+
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo-pokemon {
+    animation: /*salto*/ infinite 2s linear;
+  }
+  .App-logo{
+    animation: /*aumentar*/ infinite 4s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+
+@keyframes salto {
+  0% {
+    transform: translateY(2px) /*rotate(0deg)*/;
+  }
+  25% {
+    transform: translateY(0px) /*rotate(90deg)*/;
+  }
+  50% {
+    transform: translateY(-5px) /*rotate(180deg)*/;
+  }
+  75%{
+    transform: translateY(0px) /*rotate(270deg)*/;
+  }
+  100%{
+    transform: translateY(2px) /*rotate(359deg)*/;
+  }
+  
+}
+
+
+
+@keyframes aumentar {
+  0% {
+    width: 15vw;
+  }
+  25% {
+    width: 10vw;
+  }
+  50% {
+    width: 8vw;
+  }
+  75%{
+    width: 10vw;
+  }
+  100%{
+    width: 15vw;
+  }
+}
+
