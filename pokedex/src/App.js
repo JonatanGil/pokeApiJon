@@ -95,7 +95,7 @@ class Buscador extends React.Component {
 
     return (
       <div className="App-buscador">
-      <form onSubmit={this.submitEnviarNombre} ontouchend={this.submitEnviarNombre}>
+      <form onSubmit={this.submitEnviarNombre} >
         <img src={logo} className="App-logo" alt="logo" onClick={this.inicio}/>
           <input type="text" value={this.state.value} onChange={this.cambiarNombreCuandoCambia} onClick={this.vaciarNombre} />
           <input type="submit" value="Buscar" />
@@ -108,6 +108,7 @@ class Buscador extends React.Component {
 
 
 }
+/*ontouchend={this.submitEnviarNombre}*/
 /*  {this.state.unSoloPokemon ?
         <Menu valorPokemons={this.state.pokemonsLista} valorBuscador={this.state.value} unSoloPokemon={true}/>
         :

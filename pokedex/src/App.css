@@ -1,5 +1,7 @@
 
-
+body{
+  cursor:'pointer';
+}
 .App-body {
   text-align: center;
   background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(217,8,8,1) 100%);
@@ -52,12 +54,14 @@ form{
   font-size: 25px;
   width: calc(80vw);
   cursor:'pointer';
+  pointer-events: all;
 }
 
 .App-buscador input[value="Buscar"]{
   width: calc(25vw);
   margin-top: 4px;
   cursor:'pointer';
+  pointer-events: all;
 }
 
 .tarjeta{
@@ -154,12 +158,10 @@ img[id]:hover{
 
   .App-buscador input{
     width: calc(70vw);
-    cursor:'pointer';
   }
   .App-buscador input[value="Buscar"]{
     width: calc(25vw);
     margin-top: 4px;
-    cursor:'pointer';
   }
 
 .tarjeta{
@@ -180,12 +182,10 @@ img[id]:hover{
 
 .App-buscador input{
   width: calc(70vw);
-  cursor:'pointer';
 }
 .App-buscador input[value="Buscar"]{
   width: calc(30vw);
   margin-top: 4px;
-  cursor:'pointer';
 }
 .tarjeta{
 
