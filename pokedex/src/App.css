@@ -51,11 +51,13 @@ form{
   margin-left:10px;
   font-size: 25px;
   width: calc(80vw);
+  cursor:'pointer';
 }
 
 .App-buscador input[value="Buscar"]{
   width: calc(25vw);
   margin-top: 4px;
+  cursor:'pointer';
 }
 
 .tarjeta{
