@@ -35,8 +35,8 @@ class Buscador extends React.Component {
   }
 
   submitEnviarNombre(event){
-    console.log(event.target.childNodes[1].value);
-    this.setState({ value: event.target.childNodes[1].value });
+    console.log(event.target.parentNode.childNodes[1].value);
+    this.setState({ value: event.target.parentNode.childNodes[1].value });
     event.preventDefault();
   }
 
@@ -98,7 +98,7 @@ class Buscador extends React.Component {
       <form onSubmit={this.submitEnviarNombre} >
         <img src={logo} className="App-logo" alt="logo" onClick={this.inicio}/>
           <input type="text" value={this.state.value} onChange={this.cambiarNombreCuandoCambia} onClick={this.vaciarNombre} />
-          <input type="submit" value="Buscar" />
+          <input type="submit" value="Buscar" onSubmit={this.submitEnviarNombre} />
         </form>
         <Menu valorPokemons={this.state.pokemonsLista} valorBuscador={this.state.value} unSoloPokemon={false}/>
         </div>
