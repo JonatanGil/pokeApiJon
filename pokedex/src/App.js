@@ -95,10 +95,10 @@ class Buscador extends React.Component {
 
     return (
       <div className="App-buscador">
-      <form onSubmit={this.submitEnviarNombre} >
+      <form>
         <img src={logo} className="App-logo" alt="logo" onClick={this.inicio}/>
           <input type="text" value={this.state.value} onChange={this.cambiarNombreCuandoCambia} onClick={this.vaciarNombre} />
-          <input type="submit" value="Buscar" onSubmit={this.submitEnviarNombre} />
+          <input type="submit" value="Buscar" onClick={this.submitEnviarNombre} />
         </form>
         <Menu valorPokemons={this.state.pokemonsLista} valorBuscador={this.state.value} unSoloPokemon={false}/>
         </div>
