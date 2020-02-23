@@ -35,8 +35,8 @@ class Buscador extends React.Component {
   }
 
   submitEnviarNombre(event){
-    console.log(event.target.parentNode.childNodes[1].value);
-    this.setState({ value: event.target.parentNode.childNodes[1].value });
+    console.log(event.target.childNodes[1].value);
+    this.setState({ value: event.target.childNodes[1].value });
     event.preventDefault();
   }
 
@@ -88,17 +88,17 @@ class Buscador extends React.Component {
   }
 
   render() {
-    console.log(this.state.pokemonsLista);
 
-    //carga la funcion pokemon undefined y peta ?? antes que el didunmount carga antes el render??
+
+    //carga la funcion pokemon undefined y peta ?? antes que el didunmount carga antes el render, caarga dos veces¿¿ en el didmouint al cambiar state cambia x2???
     if (this.state.pokemonsLista[0].sprites == null) { return null }
 
     return (
       <div className="App-buscador">
-      <form>
+        <form onSubmit={this.submitEnviarNombre}>
         <img src={logo} className="App-logo" alt="logo" onClick={this.inicio}/>
           <input type="text" value={this.state.value} onChange={this.cambiarNombreCuandoCambia} onClick={this.vaciarNombre} />
-          <input type="submit" value="Buscar" onClick={this.submitEnviarNombre} />
+          <input type="submit" value="Buscar" />
         </form>
         <Menu valorPokemons={this.state.pokemonsLista} valorBuscador={this.state.value} unSoloPokemon={false}/>
         </div>
@@ -108,7 +108,6 @@ class Buscador extends React.Component {
 
 
 }
-/*ontouchend={this.submitEnviarNombre}*/
 /*  {this.state.unSoloPokemon ?
         <Menu valorPokemons={this.state.pokemonsLista} valorBuscador={this.state.value} unSoloPokemon={true}/>
         :
